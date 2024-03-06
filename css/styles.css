@@ -12,7 +12,25 @@ body {
     transition: background-color 0.5s;
     color: black;
     transition: all .5s ease;
-    overflow-x: hidden; /* Prevent horizontal scrolling on smaller screens */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling on smaller screens */
+    overflow-y: auto;
+    /* Enable vertical scrolling if necessary */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    flex-shrink: 0;
+    /* Prevent the footer from shrinking */
+    width: 100%;
+    /* Ensure footer takes full width */
+    position: fixed;
+    /* Keep the footer fixed at the bottom */
+    bottom: 0;
+    /* Align the footer to the bottom of the viewport */
+    z-index: 999;
+    /* Ensure the footer appears above other content */
 }
 
 .container {
@@ -51,13 +69,6 @@ h1 {
 
 .box:hover {
     outline-offset: calc(var(--g)/-5);
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    flex-shrink: 0; /* Prevent the footer from shrinking */
-    width: 100%; /* Ensure footer takes full width */
 }
 
 #switch {
